@@ -21,6 +21,9 @@ public class GroupEvent extends Event{
     }
 
     public void sendInvites(){
+        for(User user : guestList){
+            user.invitationAlert(this);
+        }
         return;
     }
 
