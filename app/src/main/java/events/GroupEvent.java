@@ -7,9 +7,8 @@ import java.util.List;
 public class GroupEvent extends Event{
     private List<User> guestList = new ArrayList<User>();
 
-    public GroupEvent(String title, LocalDateTime time, String location, User owner){
+    public GroupEvent(String title, LocalDateTime time, String location){
         super(title, time, location);
-        guestList.add(owner);
     }
 
     public void addGuest(User name){
