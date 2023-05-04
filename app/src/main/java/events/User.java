@@ -1,6 +1,5 @@
 package events;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class User {
@@ -18,18 +17,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Event createEvent(String title, LocalDateTime time, String location, String type) {
-        if(type == "Personal") {
-            PersonalEvent event = new PersonalEvent(title, time, location, this.name);
-            addToSchedule(event);
-            return event;
-        } else {
-            GroupEvent event = new GroupEvent(title, time, location, this);
-            addToSchedule(event);
-            return event;
-        }
     }
 
     public boolean addToSchedule(Event event) {
